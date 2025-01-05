@@ -4,4 +4,3 @@ python-dotenv
 pymongo
 certifi
 #-e . # this will refere to the setup file to package our project. do this step at last for deployment to pack all the files as packages
-git
