@@ -1,0 +1,13 @@
+[ 2025-01-12 01:04:46,367 ] 157 numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[ 2025-01-12 01:04:51,133 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-01-12 01:04:51,139 ] 107 dagshub - INFO - Accessing as Manohar-mata
+[ 2025-01-12 01:04:51,298 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/Manohar-mata/NetworkSecurity "HTTP/1.1 200 OK"
+[ 2025-01-12 01:04:51,448 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-01-12 01:04:51,456 ] 107 dagshub - INFO - Initialized MLflow to track repo "Manohar-mata/NetworkSecurity"
+[ 2025-01-12 01:04:51,459 ] 107 dagshub - INFO - Repository Manohar-mata/NetworkSecurity initialized!
+[ 2025-01-12 01:04:51,460 ] 16 root - INFO - initiate the data ingestion
+[ 2025-01-12 01:04:51,728 ] 96 pymongo.serverSelection - INFO - {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 6782c7db84f8898fd85e3365, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('cluster0-shard-00-00.7be0x.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('cluster0-shard-00-01.7be0x.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('cluster0-shard-00-02.7be0x.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "6782c7db84f8898fd85e3365"}, "remainingTimeMS": 30}
+[ 2025-01-12 01:04:53,943 ] 70 root - INFO - performed train test split on dataframe
+[ 2025-01-12 01:04:53,943 ] 75 root - INFO - Created directory for train test data
+[ 2025-01-12 01:04:54,064 ] 82 root - INFO - Exported train and test file path
+[ 2025-01-12 01:04:54,070 ] 18 root - INFO - Data Ingestion is completed

@@ -1,0 +1,6 @@
+[ 2025-01-12 00:55:46,349 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-01-12 00:55:46,357 ] 107 dagshub - INFO - Accessing as Manohar-mata
+[ 2025-01-12 00:55:46,525 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/Manohar-mata/NetworkSecurity "HTTP/1.1 200 OK"
+[ 2025-01-12 00:55:46,679 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-01-12 00:55:46,681 ] 107 dagshub - INFO - Initialized MLflow to track repo "Manohar-mata/NetworkSecurity"
+[ 2025-01-12 00:55:46,682 ] 107 dagshub - INFO - Repository Manohar-mata/NetworkSecurity initialized!

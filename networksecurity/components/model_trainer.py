@@ -1,5 +1,6 @@
 import os
 import sys
+import pandas as pd
 
 from networksecurity.exception.exception import NetworkSecurityException
 from networksecurity.logging.logger import logging
@@ -21,6 +22,10 @@ from sklearn.ensemble import (
     GradientBoostingClassifier,
     RandomForestClassifier
 )
+import mlflow
+import dagshub
+dagshub.init(repo_owner='Manohar-mata', repo_name='NetworkSecurity', mlflow=True)
+
 
 
 class ModelTrainer:
@@ -31,6 +36,20 @@ class ModelTrainer:
             self.data_transformation_artifact=data_transformation_artifact
         except Exception as e:
             raise NetworkSecurityException(e,sys)
+        
+    def track_mlflow(self,best_model,classification_metric):
+        with mlflow.start_run():
+            f1_score=classification_metric.f1_score
+            precision_score=classification_metric.precision_score
+            recall_score=classification_metric.recall_score
+
+            mlflow.log_metric("f1_score",f1_score)
+            mlflow.log_metric("precision",precision_score)
+            mlflow.log_metric("recall",recall_score)
+            mlflow.sklearn.log_model(best_model,"model")
+
+
+
         
     def train_model(self,X_train,y_train,X_test,y_test):
         try:
@@ -85,14 +104,17 @@ class ModelTrainer:
             
             best_model=models[best_model_name]
             y_train_pred=best_model.predict(X_train)
+            save_object("final_model/model.pkl",best_model)
 
             classification_train_metric=get_classification_score(y_true=y_train,y_pred=y_train_pred)
 
-            ## Track the Mlflow
+             ## Track the experiements with mlflow
+            self.track_mlflow(best_model,classification_train_metric)
 
             y_test_pred=best_model.predict(X_test)
 
             classification_test_metric=get_classification_score(y_test,y_test_pred)
+            self.track_mlflow(best_model,classification_test_metric)
 
             preprocessor = load_object(file_path=self.data_transformation_artifact.transformed_object_file_path)
                 
@@ -122,8 +144,10 @@ class ModelTrainer:
             train_file_path=self.data_transformation_artifact.transformed_train_file_path
             test_file_path=self.data_transformation_artifact.transformed_test_file_path
 
+
             train_arr=load_numpy_array_data(train_file_path)
             test_arr=load_numpy_array_data(test_file_path)
+        
 
             X_train,y_train,X_test,y_test=(
                 train_arr[:,:-1],
