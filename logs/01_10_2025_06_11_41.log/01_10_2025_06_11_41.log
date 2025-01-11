@@ -1,8 +1,0 @@
-[ 2025-01-10 06:11:44,294 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
-[ 2025-01-10 06:11:44,310 ] 107 dagshub - INFO - Accessing as Manohar-mata
-[ 2025-01-10 06:11:44,480 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/Manohar-mata/NetworkSecurity "HTTP/1.1 200 OK"
-[ 2025-01-10 06:11:44,624 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
-[ 2025-01-10 06:11:44,632 ] 107 dagshub - INFO - Initialized MLflow to track repo "Manohar-mata/NetworkSecurity"
-[ 2025-01-10 06:11:44,635 ] 107 dagshub - INFO - Repository Manohar-mata/NetworkSecurity initialized!
-[ 2025-01-10 06:11:44,636 ] 16 root - INFO - initiate the data ingestion
-[ 2025-01-10 06:11:44,855 ] 96 pymongo.serverSelection - INFO - {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 67806cc8928beffd92b3ac3c, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('cluster0-shard-00-00.7be0x.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('cluster0-shard-00-01.7be0x.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('cluster0-shard-00-02.7be0x.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "67806cc8928beffd92b3ac3c"}, "remainingTimeMS": 30}
