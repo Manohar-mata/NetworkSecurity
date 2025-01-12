@@ -5,7 +5,7 @@ This project aims to develop an end-to-end pipeline for detecting phishing websi
 
 ---
 
-## Architecture
+## Architecture folders contian the architectures.
 
 ### Pipeline Components
 1. **Data Ingestion**
@@ -13,14 +13,14 @@ This project aims to develop an end-to-end pipeline for detecting phishing websi
    - Converts raw data into a structured format.
    - Stores the processed data as artifacts.
 
-   _Add Architecture Diagram Here_
+
 
 2. **Data Validation**
    - Ensures the quality and consistency of the ingested data.
    - Checks for missing values, invalid formats, or other anomalies.
    - Outputs validated data artifacts.
 
-   _Add Architecture Diagram Here_
+   
 
 3. **Data Transformation**
    - Converts raw features into a suitable format for model training.
@@ -40,13 +40,13 @@ This project aims to develop an end-to-end pipeline for detecting phishing websi
    - Determines if the model meets acceptance criteria for deployment.
    - Outputs evaluation artifacts.
 
-   _Add Architecture Diagram Here_
+   
 
 6. **Model Pusher**
    - Pushes the accepted model to cloud services (AWS/Azure) for production use.
    - Deploys the model for real-time or batch inference.
 
-   _Add Architecture Diagram Here_
+ 
 
 ---
 
@@ -100,5 +100,5 @@ The **Model Pusher Component** deploys the accepted model to cloud environments 
 
 ---
 
-_Add Architecture Diagram Here_
+
 
