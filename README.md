@@ -1,4 +1,4 @@
-# Phishing Website Detection using Machine Learning
+# Enhancing Network Security Through Phishing Website Detection Using Machine Learning(MLops)
 
 ## Overview
 This project aims to develop an end-to-end pipeline for detecting phishing websites by leveraging machine learning techniques. The pipeline includes multiple modular components to ensure efficient data handling, model training, and deployment.
