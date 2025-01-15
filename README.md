@@ -27,13 +27,13 @@ This project aims to develop an end-to-end pipeline for detecting phishing websi
    - Applies techniques like scaling, encoding, or feature engineering.
    - Generates transformation artifacts.
 
-   _Add Architecture Diagram Here_
+   
 
 4. **Model Training**
    - Trains a machine learning model using the transformed data.
    - Stores model artifacts for evaluation.
 
-   _Add Architecture Diagram Here_
+
 
 5. **Model Evaluation**
    - Evaluates the trained model against validation metrics.
