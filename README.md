@@ -36,7 +36,7 @@ The folders contain architecture details for each component.
 6. **Model Deployment**
    - Deploys the accepted model using AWS services, including S3 buckets, ECR repositories, and EC2 instances.
    - Uses Docker to create containerized images for deployment.
-   - Ensures scalability for real-time or batch inference.
+   - Implements CI/CD pipelines using GitHub Actions for seamless and automated deployment.
 
 ---
 
@@ -64,12 +64,10 @@ The **Model Trainer Component** uses the transformed data to train a machine lea
 The **Model Evaluation Component** assesses the model's performance using metrics such as accuracy, precision, recall, and F1-score. Models meeting predefined criteria are marked for deployment.
 
 ### 6. Model Deployment
-The **Model Pusher Component** deploys the accepted model using AWS services:
-- **S3 Buckets**: For storing model artifacts and related files.
-- **ECR Repository**: For managing Docker images.
-- **EC2 Instances**: For hosting and running the deployed model.
-  
-Docker is used to containerize the application for seamless deployment, ensuring consistency across environments.
+The **Model Pusher Component** deploys the accepted model using:
+- **AWS Services**: S3 Buckets for storing model artifacts, ECR Repository for managing Docker images, and EC2 Instances for hosting and running the deployed model.
+- **CI/CD Pipelines**: GitHub Actions for automating and streamlining the deployment process.
+- **Docker**: For containerizing the application to ensure consistency across environments.
 
 ---
 
@@ -77,6 +75,7 @@ Docker is used to containerize the application for seamless deployment, ensuring
 - **Scalability**: Modular pipeline ensures scalability for large datasets.
 - **Automation**: End-to-end workflow automation for seamless execution.
 - **Cloud Integration**: Leverages AWS services (S3, ECR, EC2) for deployment.
+- **CI/CD Integration**: GitHub Actions ensures smooth and automated deployment workflows.
 - **Experiment Tracking**: Tracks experiments and models using MLflow and DagsHub.
 - **Validation**: Robust mechanisms for ensuring data quality.
 
@@ -84,7 +83,7 @@ Docker is used to containerize the application for seamless deployment, ensuring
 
 ## Usage Instructions
 1. Clone the repository.
-2. Configure MongoDB, AWS credentials, and Docker.
+2. Configure MongoDB, AWS credentials, Docker, and GitHub Actions.
 3. Run the pipeline by executing the main script.
 4. Use MLflow and DagsHub for tracking experiments and monitoring performance.
 
